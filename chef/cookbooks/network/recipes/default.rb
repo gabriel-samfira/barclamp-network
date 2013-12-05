@@ -14,7 +14,9 @@
 # limitations under the License.
 #
 
-return if node[:platform] == "windows"
+if node[:platform] == "windows"
+  return
+end
 
 # Make sure packages we need will be present
 case node[:platform]
